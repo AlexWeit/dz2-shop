@@ -1,0 +1,7 @@
+{
+  "name": "dz2-shop",
+  "dependencies": {
+    "jquery": "1.11.3",
+    "modernizr": "2.8.3"
+  }
+}
