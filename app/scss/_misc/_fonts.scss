@@ -17,3 +17,27 @@
 		font-weight: 700;
 	}
 }
+
+@font-face {
+    font-family: 'als_rublregular';
+    src: url('/fonts/rouble-webfont.eot');
+    src: url('/fonts/rouble-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/rouble-webfont.woff2') format('woff2'),
+         url('/fonts/rouble-webfont.woff') format('woff'),
+         url('/fonts/rouble-webfont.ttf') format('truetype'),
+         url('/fonts/rouble-webfont.svg#als_rublregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.rub {
+	font-family: 'als_rublregular';
+	font-style: normal;
+
+	&:after {
+		content: 'a';
+		font-style: inherit;
+		font-size: inherit;
+		line-height: inherit;
+	}
+}
