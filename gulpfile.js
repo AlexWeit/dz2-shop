@@ -40,7 +40,7 @@ var
 		},
 
 		browserSync : {
-			baseDir : './',
+			baseDir : 'app',
 			watchPaths : ['app/*.html', 'app/css/*.css', 'app/js/*.js']
 		}
 	}
@@ -73,6 +73,7 @@ gulp.task('compass', function() {
 
 gulp.task('sync', function() {
 	browserSync.init({
+		port: 3000,
 		server: {
 			baseDir: paths.browserSync.baseDir
 		}

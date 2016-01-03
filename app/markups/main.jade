@@ -12,8 +12,8 @@ html
 
         meta(name='viewport' content='width=device-width')
         link(rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Open+Sans:100,400,600,700&subset=latin,cyrillic' media='screen, projection, print')
-        link(rel='stylesheet' type='text/css' href='/app/css/main.css' media='screen, projection, print')
-        script(src='/app/bower/modernizr/modernizr.js')
+        link(rel='stylesheet' type='text/css' href='css/main.css' media='screen, projection, print')
+        script(src='bower/modernizr/modernizr.js')
 
     body
         <!--[if lt IE 8]>
@@ -23,6 +23,8 @@ html
         .wrapper
             .maincontent
                 include _common/_header
+                include _common/_nav
+                include _common/_breadcrumbs
 
                 block content
 
@@ -30,7 +32,7 @@ html
 
         script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
         script.
-            window.jQuery || document.write('<script src="/app/bower/jquery/dist/jquery.js"><\/script>');
+            window.jQuery || document.write('<script src="bower/jquery/dist/jquery.js"><\/script>');
             
         script(src='js/plugins.min.js')
         script(src='js/main.min.js')

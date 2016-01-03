@@ -9,8 +9,8 @@
 		<title>Главная страница (main.psd)</title>
 		<meta name="viewport" content="width=device-width">
 		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:100,400,600,700&amp;subset=latin,cyrillic" media="screen, projection, print">
-		<link rel="stylesheet" type="text/css" href="/app/css/main.css" media="screen, projection, print">
-		<script src="/app/bower/modernizr/modernizr.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/main.css" media="screen, projection, print">
+		<script src="bower/modernizr/modernizr.js"></script>
 	</head>
 	<body>
 		<!--[if lt IE 8]>
@@ -18,14 +18,274 @@
 		<![endif]-->
 		<div class="wrapper">
 			<div class="maincontent">
-				<header class="header"></header>
-				<article class="content-wrapper"></article>
+				<header class="header">
+					<div class="header__top">
+						<div class="container">
+							<div class="header__top-left">
+								<ul class="socials socials__black">
+									<li class="socials__item socials__item_vk"><a href="#" class="socials__link">
+											<div class="socials__icon"></div></a></li>
+									<li class="socials__item socials__item_fb"><a href="#" class="socials__link">
+											<div class="socials__icon"></div></a></li>
+									<li class="socials__item socials__item_tw"><a href="#" class="socials__link">
+											<div class="socials__icon"></div></a></li>
+								</ul>
+							</div>
+							<div class="header__top-right">
+								<div class="adress">ул. Маяковского 6, офис 17</div><a href="tel:+79211231312" class="phone">+7 (921) 123-13-12</a>
+							</div>
+						</div>
+					</div>
+					<div class="header__bottom">
+						<div class="container"><a href="#" class="logo"><img src="/img/logos/header-logo.png" alt="cooltech logo" class="logo__img">
+								<div class="logo__text">Cooltech</div></a>
+							<div class="search">
+								<form class="search__form">
+									<input name="" type="text" placeholder="Что будем искать" class="search__form-input">
+									<input name="" type="submit" value="Найти" class="search__form-submit">
+								</form>
+							</div>
+							<div class="menu">
+								<ul class="menu__list">
+									<li class="menu__item"><a href="#" class="menu__link">Карта проезда</a></li>
+									<li class="menu__item"><a href="#" class="menu__link">История заказов</a></li>
+									<li class="menu__item"><a href="#" class="menu__link">Корзина</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</header>
+				<nav class="nav">
+					<div class="container">
+						<ul class="nav__list">
+							<li class="nav__item nav__item_"><a href="#" class="nav__link">Планшеты</a></li>
+							<li class="nav__item nav__item_active"><a href="#" class="nav__link">Мобильные телефоны</a></li>
+							<li class="nav__item nav__item_"><a href="#" class="nav__link">Mp3 плееры</a></li>
+							<li class="nav__item nav__item_"><a href="#" class="nav__link">Персональные компьютеры</a></li>
+							<li class="nav__item nav__item_"><a href="#" class="nav__link">Аксессуары</a></li>
+							<li class="nav__item nav__item_"><a href="#" class="nav__link">Бытовая техника</a></li>
+						</ul>
+					</div>
+				</nav>
+				<div class="breadcrumbs">
+					<div class="container">
+						<ul class="breadcrumbs__list">
+							<li class="breadcrumbs__item "><a href="#" class="breadcrumbs__link">Главная</a></li>
+							<li class="breadcrumbs__item active"><a href="#" class="breadcrumbs__link">Каталог</a></li>
+						</ul>
+					</div>
+				</div>
+				<article class="content-wrapper">
+					<div class="container">
+						<div class="main-title">Мобильные телефоны</div>
+						<div class="main-content">
+							<div class="sidebar">
+								<div class="categories">
+									<ul class="categories__list">
+										<li class="categories__item"><a href="#" class="categories__link">Флагманы</a></li>
+										<li class="categories__item active"><a href="#" class="categories__link">Бюджетная линейка</a></li>
+									</ul>
+								</div>
+								<div class="filter">
+									<ul class="filter__list">
+										<li class="filter__item">
+											<div class="filter__title"><a href="#" class="filter__title-link">Наличие в магазине</a></div>
+											<div class="filter__content">
+												<ul class="filter__choose">
+													<li class="filter__choose-item">
+														<label class="filter__choose-label">
+															<input name="location" type="radio" class="filter__choose-input">
+															<div class="filter__choose-elem"></div>
+															<div class="filter__choose-text">Во всех магазинах</div>
+														</label>
+													</li>
+													<li class="filter__choose-item">
+														<label class="filter__choose-label">
+															<input name="location" type="radio" class="filter__choose-input">
+															<div class="filter__choose-elem"></div>
+															<div class="filter__choose-text">В ближайшем ко мне магазине</div>
+														</label>
+													</li>
+												</ul>
+											</div>
+										</li>
+										<li class="filter__item">
+											<div class="filter__title"><a href="#" class="filter__title-link">Бренды</a></div>
+											<div class="filter__content">
+												<ul class="filter__choose filter__choose_checkboxes">
+													<li class="filter__choose-item">
+														<label class="filter__choose-label">
+															<input name="" type="checkbox" class="filter__choose-input">
+															<div class="filter__choose-elem"></div>
+															<div class="filter__choose-text">Lenovo</div>
+														</label>
+													</li>
+													<li class="filter__choose-item">
+														<label class="filter__choose-label">
+															<input name="" type="checkbox" class="filter__choose-input">
+															<div class="filter__choose-elem"></div>
+															<div class="filter__choose-text">Apple</div>
+														</label>
+													</li>
+													<li class="filter__choose-item">
+														<label class="filter__choose-label">
+															<input name="" type="checkbox" class="filter__choose-input">
+															<div class="filter__choose-elem"></div>
+															<div class="filter__choose-text">Samsung</div>
+														</label>
+													</li>
+													<li class="filter__choose-item">
+														<label class="filter__choose-label">
+															<input name="" type="checkbox" class="filter__choose-input">
+															<div class="filter__choose-elem"></div>
+															<div class="filter__choose-text">Asus</div>
+														</label>
+													</li>
+													<li class="filter__choose-item">
+														<label class="filter__choose-label">
+															<input name="" type="checkbox" class="filter__choose-input">
+															<div class="filter__choose-elem"></div>
+															<div class="filter__choose-text">Motorola</div>
+														</label>
+													</li>
+												</ul>
+												<div class="filter__reset--wrap"><a href="#" class="filter__reset">Сбросить фильтр</a></div>
+											</div>
+										</li>
+										<li class="filter__item">
+											<div class="filter__title"><a href="#" class="filter__title-link">Цена</a></div>
+											<div class="filter__content">
+												<div class="filter__slider">
+													<div class="filter__slider-displays">
+														<div class="filter__slider-left">
+															<div class="filter__slider-text">от</div>
+															<input name="" type="text" placeholder="" class="filter__slider-input filter__slider-input_from">
+														</div>
+														<div class="filter__slider-right">
+															<div class="filter__slider-text">до</div>
+															<input name="" type="text" placeholder="" class="filter__slider-input filter__slider-input_to">
+														</div>
+													</div>
+													<div class="filter__slider-element"></div>
+												</div>
+											</div>
+										</li>
+										<li class="filter__item">
+											<div class="filter__title"><a href="#" class="filter__title-link">Цвет</a></div>
+											<div class="filter__content">
+												<ul class="filter__colors">
+													<li class="filter__colors-item"><a href="#" style="background-color: #ffffff" class="filter__colors-link"></a></li>
+													<li class="filter__colors-item"><a href="#" style="background-color: #cccccc" class="filter__colors-link"></a></li>
+													<li class="filter__colors-item"><a href="#" style="background-color: #000000" class="filter__colors-link"></a></li>
+													<li class="filter__colors-item"><a href="#" style="background-color: #0a3153" class="filter__colors-link"></a></li>
+													<li class="filter__colors-item"><a href="#" style="background-color: #ff1800" class="filter__colors-link"></a></li>
+													<li class="filter__colors-item"><a href="#" style="background-color: #fff343" class="filter__colors-link"></a></li>
+													<li class="filter__colors-item"><a href="#" style="background-color: #fb914a" class="filter__colors-link"></a></li>
+													<li class="filter__colors-item"><a href="#" style="background-color: #92c37c" class="filter__colors-link"></a></li>
+													<li class="filter__colors-item"><a href="#" style="background-color: #40a6ff" class="filter__colors-link"></a></li>
+													<li class="filter__colors-item"><a href="#" style="background-color: #9870ad" class="filter__colors-link"></a></li>
+													<li class="filter__colors-item"><a href="#" style="background-color: #dc78ad" class="filter__colors-link"></a></li>
+													<li class="filter__colors-item"><a href="#" style="background-color: #7f401d" class="filter__colors-link"></a></li>
+												</ul>
+											</div>
+										</li>
+										<li class="filter__item">
+											<div class="filter__title"><a href="#" class="filter__title-link">Операционные системы</a></div>
+											<div class="filter__content">
+												<ul class="filter__choose filter__choose_checkboxes">
+													<li class="filter__choose-item">
+														<label class="filter__choose-label">
+															<input name="" type="checkbox" class="filter__choose-input">
+															<div class="filter__choose-elem"></div>
+															<div class="filter__choose-text">Android</div>
+														</label>
+													</li>
+													<li class="filter__choose-item">
+														<label class="filter__choose-label">
+															<input name="" type="checkbox" class="filter__choose-input">
+															<div class="filter__choose-elem"></div>
+															<div class="filter__choose-text">iOs</div>
+														</label>
+													</li>
+													<li class="filter__choose-item">
+														<label class="filter__choose-label">
+															<input name="" type="checkbox" class="filter__choose-input">
+															<div class="filter__choose-elem"></div>
+															<div class="filter__choose-text">Windows Mobile</div>
+														</label>
+													</li>
+													<li class="filter__choose-item">
+														<label class="filter__choose-label">
+															<input name="" type="checkbox" class="filter__choose-input">
+															<div class="filter__choose-elem"></div>
+															<div class="filter__choose-text">Symbian</div>
+														</label>
+													</li>
+													<li class="filter__choose-item">
+														<label class="filter__choose-label">
+															<input name="" type="checkbox" class="filter__choose-input">
+															<div class="filter__choose-elem"></div>
+															<div class="filter__choose-text">Custom</div>
+														</label>
+													</li>
+												</ul>
+												<div class="filter__reset--wrap"><a href="#" class="filter__reset">Сбросить фильтр</a></div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="content">
+								<div class="sort"></div>
+								<div class="products"></div>
+							</div>
+						</div>
+						<div class="attention">
+							<div class="main-title">Важная информация</div>
+							<div class="attention__text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem laudantium, error recusandae quae quibusdam sunt aperiam, ullam modi alias corporis facere autem sed temporibus itaque perspiciatis ab eum provident eius.</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem laudantium, error recusandae quae quibusdam sunt aperiam, ullam modi alias corporis facere autem sed temporibus itaque perspiciatis ab eum provident eius.</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem laudantium, error recusandae quae quibusdam sunt aperiam, ullam modi alias corporis facere autem sed temporibus itaque perspiciatis ab eum provident eius.</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem laudantium, error recusandae quae quibusdam sunt aperiam, ullam modi alias corporis facere autem sed temporibus itaque perspiciatis ab eum provident eius.</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem laudantium, error recusandae quae quibusdam sunt aperiam, ullam modi alias corporis facere autem sed temporibus itaque perspiciatis ab eum provident eius.</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem laudantium, error recusandae quae quibusdam sunt aperiam, ullam modi alias corporis facere autem sed temporibus itaque perspiciatis ab eum provident eius.</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem laudantium, error recusandae quae quibusdam sunt aperiam, ullam modi alias corporis facere autem sed temporibus itaque perspiciatis ab eum provident eius.</p>
+							</div>
+						</div>
+					</div>
+				</article>
 			</div>
 		</div>
-		<footer class="footer"></footer>
+		<footer class="footer">
+			<div class="footer__top">
+				<div class="container">
+					<div class="footer__left"><a href="#" class="logo logo__footer"><img src="/img/logos/footer-logo.png" alt="cooltech logo" class="logo__img">
+							<div class="logo__text">Cooltech</div></a></div>
+					<div class="footer__right">
+						<ul class="socials footer_socials"></ul>
+						<li class="socials__item socials__item_vk"><a href="#" class="socials__link"></a></li>
+						<li class="socials__item socials__item_fb"><a href="#" class="socials__link"></a></li>
+						<li class="socials__item socials__item_tw"><a href="#" class="socials__link"></a></li>
+						<ul class="footer__nav">
+							<li class="footer__nav-item"><a href="#" class="footer__nav-link">Планшеты</a></li>
+							<li class="footer__nav-item"><a href="#" class="footer__nav-link">Мобильные телефоны</a></li>
+							<li class="footer__nav-item"><a href="#" class="footer__nav-link">Mp3 плееры</a></li>
+							<li class="footer__nav-item"><a href="#" class="footer__nav-link">Персональные компьютеры</a></li>
+							<li class="footer__nav-item"><a href="#" class="footer__nav-link">Аксессуары</a></li>
+							<li class="footer__nav-item"><a href="#" class="footer__nav-link">Бытовая техника</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="footer__bottom">
+				<div class="container">
+					<div class="footer__copyright">All rights reserved. 2015. No copy allowed.</div>
+				</div>
+			</div>
+		</footer>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script>
-			window.jQuery || document.write('<script src="/app/bower/jquery/dist/jquery.js"><\/script>');
+			window.jQuery || document.write('<script src="bower/jquery/dist/jquery.js"><\/script>');
 			
 		</script>
 		<script src="js/plugins.min.js"></script>
