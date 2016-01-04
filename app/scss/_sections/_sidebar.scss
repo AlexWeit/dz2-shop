@@ -43,6 +43,11 @@
 	background: $white;
 }
 
+.filter__content {
+	display: none;
+	margin-top: 30px;
+}
+
 .filter__list {
 	@extend .categories__list;
 }
@@ -54,10 +59,28 @@
 	&:first-child {
 		border-top: 0 none;
 	}
+
+	&.active {
+		.filter__title {
+			&:after {
+				@include get-sprite($select-tr-map, to-top);
+			}
+		}
+	}
 }
 
 .filter__title {
-	margin-bottom: 18px;
+	//margin-bottom: 18px;
+	padding-right: 30px;
+	position: relative;
+
+	&:after {
+		content: '';
+		@include get-sprite($select-tr-map, to-bottom);
+		position: absolute;
+		top: 7px;
+		right: 10px;
+	}
 }
 
 .filter__choose-item {

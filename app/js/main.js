@@ -144,7 +144,7 @@ var Slideshow = (function(){
 		init: function(){
 			$('.products__slideshow-link').on('click', function(e) {
 				e.preventDefault();
-				/* Act on the event */
+				
 				var
 					$this = $(this);
 
@@ -154,7 +154,41 @@ var Slideshow = (function(){
 	}
 }());
 
+var Accordeon = (function(){
+
+	var _openSection = function($this){
+		var
+			container = $this.closest('.filter__item'),
+			content = container.find('.filter__content');
+			otherContent = $this.closest('.filter').find('.filter__content');
+
+		if (!container.hasClass('active')) {
+			otherContent.slideUp().closest('.filter__item').removeClass('active');
+
+			container.addClass('active');
+			content.stop(true, true).slideDown();
+		} else {
+			container.removeClass('active');
+			content.stop(true, true).slideUp();
+		}
+	}
+
+	return {
+		init: function(){
+			$('.filter__title-link').on('click', function(e) {
+				e.preventDefault();
+				
+				_openSection($(this));
+			});
+		}
+	}
+}());
+
 $(document).ready(function(){
+
+	if ($('.filter').length) {
+		Accordeon.init();
+	}
 
 	if ($('.products__slideshow').length) {
 		Slideshow.init();
