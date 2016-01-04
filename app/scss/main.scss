@@ -28,7 +28,18 @@ $white: #fbfbfb;
 $grey: #dee1e4;
 $black: #333333;
 
+/* -------- plugins -------- */
+
+@import "_plugins/**/*";
+
+/* -------- widgets -------- */
+
+@import "_widgets/**/*";
+
 /* --------- sections --------- */
 
 @import "_sections/**/*";
+
+
+
 
