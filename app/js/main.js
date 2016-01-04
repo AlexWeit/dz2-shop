@@ -98,4 +98,10 @@ $(document).ready(function(){
 		SliderWidget.init();
 	}
 
+	if ($('.sort__select-elem').length) {
+		$('.sort__select-elem').select2({
+			minimumResultsForSearch: Infinity
+		});
+	}
+
 });

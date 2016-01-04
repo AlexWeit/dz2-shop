@@ -53,6 +53,11 @@
 	@include absolute-center;
 }
 
+.sort__select--wrap {
+	padding-top: 11px;
+	padding-left: 20px;
+}
+
 $views-map: sprite-map('icons/views/*.png', $spacing: 70px);
 $items: rows, grids, lines;
 
