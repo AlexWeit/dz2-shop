@@ -142,4 +142,17 @@ $(document).ready(function(){
 		});
 	}
 
+	$('.filter__reset').on('click', function(e) {
+		e.preventDefault();
+
+		var
+			$this = $(this),
+			container = $this.closest('.filter__item'),
+			checkboxes = container.find('input:checkbox');
+
+		checkboxes.each(function(){
+			$(this).removeProp('checked');
+		});
+	});
+
 });
