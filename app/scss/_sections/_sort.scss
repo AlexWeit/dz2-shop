@@ -69,6 +69,15 @@ $items: rows, grids, lines;
 
 		&:hover {
 			$hover-icon: $item + '-hover';
+
+			.sort__view-icon {
+				@include get-sprite($views-map, $hover-icon);
+			}
+		}
+
+		&.active {
+			$hover-icon: $item + '-hover';
+
 			.sort__view-icon {
 				@include get-sprite($views-map, $hover-icon);
 			}

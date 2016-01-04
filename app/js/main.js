@@ -88,7 +88,45 @@ var RatingWidget = (function(){
 	}
 }());
 
+var ViewStateChange = (function(){
+
+	var _previousClass = '';
+
+	var _changeState = function($this){
+		var
+			item = $this.closest('.sort__view-item'),
+			view = item.data('view'),
+			listOfItems = $('#products-list'),
+			modificationPrefix = 'products__list_',
+			classOfViewState = modificationPrefix + view;
+
+		if (_previousClass == '') {
+			_previousClass = listOfItems.attr('class');
+		}
+
+		_changeActiveClass($this);
+		listOfItems.attr('class', _previousClass + ' ' + classOfViewState);
+	};
+
+	var _changeActiveClass = function($this) {
+		$this
+			.closest('.sort__view-item').addClass('active')
+			.siblings().removeClass('active');
+	}
+
+	return {
+		init: function(){
+			$('.sort__view-link').on('click', function(e){
+				e.preventDefault();
+				_changeState($(this));
+			})
+		}
+	}
+}());
+
 $(document).ready(function(){
+
+	ViewStateChange.init();
 
 	if ($('.products__rating').length) {
 		RatingWidget.init();
