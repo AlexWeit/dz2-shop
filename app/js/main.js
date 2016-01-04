@@ -223,4 +223,10 @@ $(document).ready(function(){
 		});
 	});
 
+	/* -------- columnizer -------- */
+
+	$('.attention__text').columnize({
+		width: 500
+	})
+
 });
