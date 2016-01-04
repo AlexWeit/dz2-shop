@@ -27,6 +27,13 @@
 			color: #5d656c;
 		}
 	}
+
+	&:hover {
+		.categories__link{
+			background: #d9e5ea;
+			color: #5d656c;
+		}
+	}
 }
 
 .categories__link {
@@ -67,19 +74,27 @@
 			}
 		}
 	}
+
+	&:hover {
+		.filter__title-link {
+			font-size: 16px;
+		}
+	}
 }
 
 .filter__title {
 	//margin-bottom: 18px;
 	padding-right: 30px;
 	position: relative;
-
-	&:after {
-		content: '';
-		@include get-sprite($select-tr-map, to-bottom);
-		position: absolute;
-		top: 7px;
-		right: 10px;
+	
+	&:hover {
+		&:after {
+			content: '';
+			@include get-sprite($select-tr-map, to-bottom);
+			position: absolute;
+			top: 7px;
+			right: 10px;
+		}
 	}
 }
 
@@ -93,7 +108,7 @@
 
 .filter__title-link {
 	color: $black;
-	font-size: 16px;
+	font-size: 14px;
 	line-height: 18px;
 	@include open-sans(semibold);
 	text-decoration: none;
@@ -162,6 +177,12 @@
 			&:after {
 				opacity: 1;
 			}
+
+			&:hover {
+				&:after {
+					@include get-sprite($misc-sprite, checkbox);
+				}
+			}
 		}
 	}
 
@@ -177,12 +198,26 @@
 			display: block;
 			@include absolute-center;
 			opacity: 0;
-			@include transition(.2s);
+			@include transition(.1s);
 			@include get-sprite($misc-sprite, checkbox);
 			@include border-radius(0);
 			width: 13px !important;
-			height: 10px !important;
+			height: 10px !important;	
 		}
+
+		&:hover {
+			&:after {
+				content: '';
+				display: block;
+				@include absolute-center;
+				opacity: 1;
+				@include transition(.1s);
+				@include get-sprite($misc-sprite, checkbox-hover);
+				@include border-radius(0);
+				width: 13px !important;
+				height: 10px !important;	
+			}
+		}	
 	}
 }
 

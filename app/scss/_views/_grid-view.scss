@@ -1,18 +1,20 @@
 .products__list_grids {
 	border: none;
-	overflow: auto;
+	//overflow: auto;
+	font-size: 0;
 	@include border-radius(0px);
-	margin-left: -11px;
+	margin-left: -15px;
 	background: transparent;
 
 	.products__item {
+		font-size: 14px;
 		@include inlineblock();
 		width: 235px;
 		border-top: 0;
 		text-align: center;
 		@include border-radius(5px);
 		border: 1px solid $grey;
-		margin-left: 11px;
+		margin-left: 15px;
 		margin-bottom: 11px;
 		background: #ffffff;
 	}

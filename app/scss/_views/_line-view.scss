@@ -43,6 +43,7 @@
 		padding-left: 0;
 		@include inlineblock(middle);
 		margin-right: 15px;
+		max-width: 100px;
 	}
 
 	.products__info-bottom {

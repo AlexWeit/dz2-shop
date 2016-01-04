@@ -48,13 +48,13 @@ $socials-map: sprite-map('icons/socials/*.png', $spacing: 70px);
 }
 
 .header__top-left {
-	width: 50%;
+	//width: 50%;
 	float: left;
 }
 
 .header__top-right {
-	width: 50%;
-	float: left;
+	//width: 50%;
+	float: right;
 }
 
 .adress {
@@ -67,6 +67,11 @@ $socials-map: sprite-map('icons/socials/*.png', $spacing: 70px);
 		@include inlineblock(middle);
 		margin-right: 9px;
 	}
+
+	&:hover {
+		cursor: pointer;
+		@include open-sans(semibold);
+	}
 }
 
 .phone {
@@ -74,12 +79,18 @@ $socials-map: sprite-map('icons/socials/*.png', $spacing: 70px);
 	color: $black;
 	text-decoration:none;
 	margin-right: 25px;
+	margin-left: 65px;
 
 	&:before {
 		content: '';
 		@include inlineblock(middle);
 		margin-right: 11px;
 		@include get-sprite($misc-sprite, phone);
+	}
+
+	&:hover {
+		cursor: pointer;
+		@include open-sans(semibold);
 	}
 }
 

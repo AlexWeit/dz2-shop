@@ -25,7 +25,7 @@ var SliderWidget = (function(){
 			    	range: true,
 			    	min: min,
 			    	max: max,
-			    	values: [min, max],
+			    	values: [ min, max ],
 			    	slide: function() {
 			    		_insertValues($this);
 			    	},
@@ -175,7 +175,7 @@ var Accordeon = (function(){
 
 	return {
 		init: function(){
-			$('.filter__title-link').on('click', function(e) {
+			$('.filter__title').on('click', function(e) {
 				e.preventDefault();
 				
 				_openSection($(this));
