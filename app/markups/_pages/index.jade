@@ -34,7 +34,7 @@ block content
 												.sort__view-icon
 
 					.products
-						ul.products__list
+						ul.products__list.products__list_grids
 							- for (var i = 0; i < 9; i++)
 								li.products__item
 									.products__item-inner
@@ -55,9 +55,11 @@ block content
 												.products__desc-title Samsung FT-I9301I GALAXY S 3
 												ul.products__desc-options
 													- var options = {'Тип SIM-карты': "Micro-SIM", "Количество SIM-карт" : "1", "Цвет" : "Белый", "ОС" : "Android", "Связь 3G" : "Есть", "4G (LTE)" : "Нет", "GPS-модуль" : "Есть"}
-													each value, key in options
-														li.products__option-key= key
-														li.products__option-value= value
+													- var index = 0;
+													- for (item in options)
+														li(class="products__option-item" + (!(index++ % 2) ? ' products__option-item_colored' : ''))
+															.products__option-key= item
+															.products__option-value= options[item]
 												.products__rating
 													ul.products__rating-stars
 														li.products__rating-stars-item.products__rating-stars-item_filled

@@ -121,6 +121,11 @@
 	margin-bottom: 14px;
 }
 
+.products__option-item {
+	background: transparent;
+	display: inline;
+}
+
 .products__option-key {
 	display: inline;
 	font-size: 14px;
@@ -221,3 +226,8 @@ $stars-map: sprite-map('icons/stars/*.png', $spacing: 70px);
 		margin-right: 8px;
 	}
 }
+
+/* ---------- other views ----------- */
+
+@import "../_views/_grid-view";
+@import "../_views/_line-view";
