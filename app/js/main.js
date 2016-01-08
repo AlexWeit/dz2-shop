@@ -1,15 +1,34 @@
 var SliderWidget = (function(){
 
-	var _insertValues = function($this) {
+	var _insertValues = function(ui) {
 		var
-			container = $this.closest('.filter__slider'),
+			elem = $(ui)[0],
+			container = $(elem.handle).parent().closest('.filter__slider'),
 			from = container.find('.filter__slider-input_from'),
 			to = container.find('.filter__slider-input_to');
 
-		var values = $this.slider('option', 'values');
+		// var values = $this.slider('option', 'values');
 
-		from.val(values[0]);
-		to.val(values[1]);
+		from.val($(elem.values)[0]);
+		to.val($(elem.values)[1]);
+
+		// Изменение значений слайдера при вводе в инпуты
+		var inputs = $('#filter__slider').find('input');
+
+		inputs.on('change', function() {
+			var minItput = from.val(),
+				maxInput = to.val();
+
+			var $this = $('.filter__slider-element');
+				
+			if (minItput < $this.data('min')) {
+				from.val($this.data('min'));
+			}
+			else if (maxInput > $this.data('max')) {
+				to.val($this.data('max'));
+			}
+			$('.filter__slider-element').slider("values",[minItput, maxInput]);
+		});
 	}
 
 	return {
@@ -18,24 +37,32 @@ var SliderWidget = (function(){
 			$('.filter__slider-element').each(function() {
 				var
 					$this = $(this),
-					min = parseInt($this.data('min')),
-					max = parseInt($this.data('max'));
+					container = $this.parent(),
+					from = container.find('.filter__slider-input_from'),
+					to = container.find('.filter__slider-input_to'),
+					min = $this.data('min'),
+					max = $this.data('max');
+
+					from.val(min);
+					to.val(max);
 
 				$this.slider({
 			    	range: true,
 			    	min: min,
 			    	max: max,
-			    	values: [ min, max ],
-			    	slide: function() {
-			    		_insertValues($this);
+			    	step: 5,
+			    	values: [min, max],
+			    	slide: function(event,ui) {
+			    		_insertValues(ui);
 			    	},
-			    	create: function() {
-			    		_insertValues($this);
+			    	create: function(event, ui) {
+			    		_insertValues(ui);
 			    	}
 			    });
 			});
 		}
 	}
+
 }());
 
 var RatingWidget = (function(){
